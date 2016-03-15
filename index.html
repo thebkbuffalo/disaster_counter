@@ -4,10 +4,20 @@
     <meta charset="utf-8">
     <title>Death Clock</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/flipclock/compiled/flipclock.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   </head>
   <body>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <div class="clock">
+      <h1>Time since last disaster</h1>
+      <br>
+      <div class="your-clock"></div>
+      <hr>
+      <a class="btn btn-primary" href="/">Reset</a></button>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/flipclock/compiled/flipclock.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
