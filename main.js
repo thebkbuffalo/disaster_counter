@@ -16,5 +16,7 @@ $(document).ready(function(){
 
   $('.reset').on('click', function(){
     clock.setTime(0);
+    clock.timer.count = 0;
+    console.log(clock.timer.count);
   });
 });
