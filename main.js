@@ -4,7 +4,6 @@ $(document).ready(function(){
 
   // time = localStorage.setItem('time', 0);
   function save() {
-    localStorage.clear();
     localStorage.setItem('time', clock.timer.count);
     console.log(localStorage.getItem('time'));
   }
@@ -14,7 +13,7 @@ $(document).ready(function(){
   });
 
 
-  setInterval(save, 5000);
+  setInterval(save, 2000);
 
 
   $('.reset').on('click', function(){
