@@ -1,18 +1,21 @@
 var clock;
+var time;
 $(document).ready(function(){
 
-  clock = new FlipClock($('.your-clock'), {
+  // time = localStorage.setItem('time', 0);
+  function save() {
+    localStorage.clear();
+    localStorage.setItem('time', clock.timer.count);
+    console.log(localStorage.getItem('time'));
+  }
+
+  clock = new FlipClock($('.your-clock'), localStorage.getItem('time'), {
 
   });
 
-  console.log(clock.callbacks);
 
-  // have this save the current time to localStorage somehow, and than make the clock start from that point everytime its initialized...this should work, also add a reset button
-  $('.save').on('click', function(){
-    console.log(clock.timer.count);
-    localStorage.setItem('time', clock.time.count);
-  });
-  // console.log(clock.timer.count);
+  setInterval(save, 5000);
+
 
   $('.reset').on('click', function(){
     clock.setTime(0);
